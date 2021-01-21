@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.Random;
 
 @SpringBootTest
-class ShardingDatabaseApplicationTests {
+class ShardingDatabaseTests {
 
     @Resource
     private PositionRepository positionRepository;
