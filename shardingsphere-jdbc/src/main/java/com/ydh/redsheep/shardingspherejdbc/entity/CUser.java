@@ -1,8 +1,11 @@
 package com.ydh.redsheep.shardingspherejdbc.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Data
 @Entity
 @Table(name = "c_user")
 public class CUser implements Serializable {
@@ -18,27 +21,4 @@ public class CUser implements Serializable {
     @Column(name = "pwd")//逻辑列名
     private String pwd;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
 }
