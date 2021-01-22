@@ -18,7 +18,7 @@ class HintTests {
     @Test
     public void test1(){
         HintManager hintManager = HintManager.getInstance();
-        hintManager.setDatabaseShardingValue(0L); //强制路由到ds${xx%2}
+        hintManager.setDatabaseShardingValue("ds0"); //强制路由到ds0
         List<City> list = cityRepository.findAll();
         list.forEach(city->{
             System.out.println(city.getId()+" "+city.getName()+" "+city.getProvince());
