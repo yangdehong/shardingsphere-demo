@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 @SpringBootTest
 class TaskTests {
@@ -24,10 +25,10 @@ class TaskTests {
 
     @Test
     public void add(){
-        for (int i=1;i<=10;i++){
+        for (int i=1;i<=100;i++){
             COrderPO cOrderPO = new COrderPO();
-            cOrderPO.setUserId(1);
-            cOrderPO.setCompanyId(1);
+            cOrderPO.setUserId(new Random().nextInt(10));
+            cOrderPO.setCompanyId(i);
             cOrderPO.setPositionId(1);
             cOrderPO.setResumeType(1);
             cOrderPO.setPublishUserId(1);
