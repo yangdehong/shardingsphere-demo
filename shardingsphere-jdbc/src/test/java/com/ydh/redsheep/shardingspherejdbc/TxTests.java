@@ -28,7 +28,7 @@ class TxTests {
 
     @Test
     @Transactional
-    @ShardingTransactionType(TransactionType.XA)
+    @ShardingTransactionType(TransactionType.BASE)
     public void test1(){
 //        TransactionTypeHolder.set(TransactionType.BASE);
         for (int i=1;i<=5;i++){
